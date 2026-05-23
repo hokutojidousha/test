@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>金沢市の中古車販売・買取なら北斗自動車 | 車検・整備も対応</title>
+<meta name="description" content="石川県金沢市の北斗自動車は、中古車販売・買取・車検・整備に対応する地域密着の中古車店です。現車確認・試乗・下取り相談も歓迎。LINEで来店予約・査定相談ができます。">
+<meta name="keywords" content="金沢市 中古車 販売 買取 車検 整備 北斗自動車 石川県 軽自動車">
+<meta property="og:title" content="金沢市の中古車販売・買取なら北斗自動車 | 車検・整備も対応">
+<meta property="og:description" content="石川県金沢市の北斗自動車。中古車販売・買取・車検・整備に対応。現車確認・試乗・下取り相談も歓迎。LINEで来店予約できます。">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Noto+Sans+JP:wght@300;400;500;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --orange: #FF6B2B;
+  --orange-light: #FF8F5E;
+  --orange-pale: #FFF0E8;
+  --yellow: #FFD23F;
+  --yellow-light: #FFF4C2;
+  --white: #ffffff;
+  --off-white: #FFFBF7;
+  --dark: #2B1F14;
+  --gray: #7A6A5A;
+  --gray-light: #F0EBE3;
+  --green: #2ECC71;
+  --radius: 16px;
+  --shadow: 0 4px 24px rgba(43,31,20,0.10);
+  --shadow-hover: 0 12px 40px rgba(255,107,43,0.20);
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { font-family:'Noto Sans JP',sans-serif; background:var(--off-white); color:var(--dark); overflow-x:hidden; }
+
+/* HEADER */
+header { position:sticky; top:0; z-index:100; background:var(--white); box-shadow:0 2px 16px rgba(43,31,20,0.08); padding:0 32px; height:64px; display:flex; align-items:center; justify-content:space-between; }
+.logo-wrap { display:flex; align-items:center; gap:10px; }
+.logo-icon { width:38px; height:38px; background:var(--orange); border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:20px; }
+.logo-text { font-family:'Paytone One',sans-serif; font-size:16px; color:var(--dark); letter-spacing:0.02em; line-height:1.1; }
+.logo-text small { display:block; font-family:'Noto Sans JP',sans-serif; font-size:10px; color:var(--gray); font-weight:400; letter-spacing:0.15em; }
+nav { display:flex; gap:6px; }
+nav a { font-size:13px; font-weight:500; color:var(--gray); text-decoration:none; padding:8px 14px; border-radius:20px; transition:all 0.2s; }
+nav a:hover { background:var(--orange-pale); color:var(--orange); }
+nav .nav-cta { background:var(--orange); color:white; padding:8px 18px; }
+nav .nav-cta:hover { background:var(--orange-light); color:white; }
+
+/* HERO */
+.hero { background:linear-gradient(135deg,var(--orange) 0%,#FF8C42 40%,var(--yellow) 100%); padding:70px 32px 80px; position:relative; overflow:hidden; text-align:center; }
+.hero::before { content:''; position:absolute; top:-60px; right:-60px; width:300px; height:300px; background:rgba(255,255,255,0.08); border-radius:50%; }
+.hero::after { content:''; position:absolute; bottom:-80px; left:-40px; width:250px; height:250px; background:rgba(255,255,255,0.06); border-radius:50%; }
+.hero-badge { display:inline-block; background:rgba(255,255,255,0.25); color:white; font-size:11px; letter-spacing:0.25em; padding:6px 18px; border-radius:20px; margin-bottom:20px; }
+.hero h1 { font-family:'Paytone One',sans-serif; font-size:clamp(36px,7vw,68px); color:white; line-height:1.1; text-shadow:0 3px 12px rgba(0,0,0,0.15); }
+.hero h1 .accent { background:var(--yellow); color:var(--dark); padding:0 12px; border-radius:8px; display:inline-block; }
+.hero-sub { font-size:16px; color:rgba(255,255,255,0.88); margin-top:16px; font-weight:500; }
+.hero-stats { display:flex; justify-content:center; gap:32px; margin-top:40px; flex-wrap:wrap; }
+.stat { background:rgba(255,255,255,0.2); backdrop-filter:blur(8px); border-radius:16px; padding:16px 28px; color:white; }
+.stat-num { font-family:'Nunito',sans-serif; font-size:32px; font-weight:800; line-height:1; }
+.stat-num span { font-size:16px; }
+.stat-label { font-size:11px; opacity:0.85; margin-top:4px; letter-spacing:0.1em; }
+
+/* FILTER */
+.filter-bar { background:var(--white); padding:16px 32px; display:flex; gap:10px; align-items:center; border-bottom:2px solid var(--gray-light); position:sticky; top:64px; z-index:90; overflow-x:auto; -webkit-overflow-scrolling:touch; }
+.filter-label { font-size:12px; font-weight:700; color:var(--gray); letter-spacing:0.1em; margin-right:4px; white-space:nowrap; }
+.filter-btn { border:2px solid var(--gray-light); background:white; color:var(--gray); font-family:'Noto Sans JP',sans-serif; font-size:13px; font-weight:500; padding:8px 18px; border-radius:20px; cursor:pointer; transition:all 0.2s; white-space:nowrap; flex-shrink:0; }
+.filter-btn:hover,.filter-btn.active { border-color:var(--orange); background:var(--orange-pale); color:var(--orange); }
+
+/* INVENTORY */
+.inventory-section { padding:48px 32px; max-width:1280px; margin:0 auto; }
+.section-title { font-family:'Paytone One',sans-serif; font-size:22px; color:var(--dark); margin-bottom:28px; display:flex; align-items:center; gap:12px; }
+.section-title::after { content:''; flex:1; height:2px; background:linear-gradient(to right,var(--orange-pale),transparent); }
+.car-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:24px; min-height:100px; }
+.car-card { background:var(--white); border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow); transition:transform 0.25s,box-shadow 0.25s; cursor:pointer; }
+.car-card:hover { transform:translateY(-6px); box-shadow:var(--shadow-hover); }
+.card-img { height:188px; background:var(--gray-light); position:relative; overflow:hidden; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:8px; color:var(--gray); font-size:11px; }
+.card-img img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.card-img svg { opacity:0.4; position:relative; z-index:1; }
+.card-img span { position:relative; z-index:1; }
+.badge-custom { position:absolute; top:12px; left:12px; background:var(--yellow); color:var(--dark); font-size:10px; font-weight:700; padding:4px 10px; border-radius:6px; z-index:2; }
+.sold-overlay { position:absolute; inset:0; background:rgba(0,0,0,0.55); display:flex; align-items:center; justify-content:center; z-index:3; }
+.sold-label { background:white; color:#374151; font-weight:700; font-size:18px; padding:8px 20px; border-radius:8px; letter-spacing:0.1em; }
+.fav-btn { position:absolute; top:12px; right:12px; width:32px; height:32px; background:white; border:none; border-radius:50%; cursor:pointer; display:flex; align-items:center; justify-content:center; font-size:16px; box-shadow:0 2px 8px rgba(0,0,0,0.12); z-index:2; }
+.card-body { padding:18px 20px 20px; }
+.car-name { font-weight:700; font-size:16px; color:var(--dark); }
+.car-grade { font-size:12px; color:var(--gray); margin-top:2px; }
+.car-memo { font-size:11px; color:var(--orange); font-weight:700; margin-top:6px; }
+.car-tags { display:flex; gap:6px; flex-wrap:wrap; margin-top:12px; }
+.tag { font-size:11px; padding:3px 10px; border-radius:12px; font-weight:500; }
+.tag-year { background:var(--yellow-light); color:#8B6A00; }
+.tag-km { background:#E8F5E9; color:#2E7D32; }
+.tag-at { background:#E3F0FF; color:#1565C0; }
+.tag-2wd { background:var(--gray-light); color:var(--gray); }
+.tag-4wd { background:#F3E8FF; color:#6A1B9A; }
+.card-meta { margin-top:16px; padding-top:14px; border-top:1px solid var(--gray-light); }
+.price-old { font-size:12px; color:var(--gray); text-decoration:line-through; margin-bottom:2px; }
+.price-down { font-size:10px; background:var(--orange); color:white; font-weight:700; padding:2px 8px; border-radius:10px; margin-left:6px; }
+.car-price { font-family:'Nunito',sans-serif; font-size:24px; font-weight:800; color:var(--orange); line-height:1; }
+.car-price small { font-size:12px; font-family:'Noto Sans JP',sans-serif; color:var(--gray); font-weight:400; }
+.car-inspection { font-size:11px; color:var(--green); font-weight:600; margin-top:4px; }
+.car-inspection.warn { color:#f59e0b; }
+.card-action { display:flex; gap:8px; margin-top:14px; }
+.btn-inquiry { flex:1; background:var(--orange); color:white; border:none; border-radius:10px; padding:12px; font-family:'Noto Sans JP',sans-serif; font-size:13px; font-weight:700; cursor:pointer; }
+.btn-inquiry:hover { background:var(--orange-light); }
+.btn-line { background:#06C755; color:white; border:none; border-radius:10px; padding:12px 14px; font-size:18px; cursor:pointer; text-decoration:none; display:flex; align-items:center; justify-content:center; }
+.btn-carsensor { display:block; text-align:center; background:var(--gray-light); color:var(--dark); font-family:'Noto Sans JP',sans-serif; font-size:12px; font-weight:700; padding:8px; border-radius:8px; text-decoration:none; margin-top:8px; }
+.btn-carsensor:hover { background:#e0dbd3; }
+
+/* KAITORI */
+.kaitori-section { background:var(--dark); padding:70px 32px; position:relative; overflow:hidden; }
+.kaitori-inner { max-width:960px; margin:0 auto; }
+.kaitori-header { text-align:center; margin-bottom:48px; }
+.kaitori-header h2 { font-family:'Paytone One',sans-serif; font-size:32px; color:var(--white); }
+.kaitori-header h2 span { color:var(--yellow); }
+.kaitori-header p { color:rgba(255,255,255,0.55); font-size:14px; margin-top:10px; line-height:1.8; }
+.kaitori-cards { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+.kaitori-card { background:rgba(255,255,255,0.05); border:1px solid rgba(255,210,63,0.2); border-radius:20px; padding:32px 28px; position:relative; }
+.kaitori-card::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg,var(--orange),var(--yellow)); border-radius:20px 20px 0 0; }
+.kaitori-emoji { font-size:40px; margin-bottom:14px; display:block; }
+.kaitori-card h3 { font-family:'Paytone One',sans-serif; font-size:20px; color:var(--yellow); margin-bottom:10px; }
+.kaitori-card p { font-size:13px; color:rgba(255,255,255,0.6); line-height:1.8; margin-bottom:16px; }
+.kaitori-points { list-style:none; margin-bottom:20px; }
+.kaitori-points li { font-size:13px; color:rgba(255,255,255,0.8); padding:6px 0; border-bottom:1px solid rgba(255,255,255,0.07); display:flex; align-items:center; gap:8px; }
+.kaitori-points li::before { content:'✓'; color:var(--yellow); font-weight:700; }
+.btn-kaitori { display:inline-flex; align-items:center; gap:8px; background:linear-gradient(135deg,var(--orange),var(--yellow)); color:var(--dark); font-family:'Noto Sans JP',sans-serif; font-size:14px; font-weight:700; border:none; border-radius:12px; padding:12px 22px; cursor:pointer; text-decoration:none; }
+.kaitori-flow { margin-top:40px; background:rgba(255,255,255,0.04); border-radius:16px; padding:24px 28px; border:1px solid rgba(255,255,255,0.08); }
+.kaitori-flow h4 { font-size:12px; letter-spacing:0.2em; color:var(--yellow); margin-bottom:18px; text-align:center; }
+.flow-steps { display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:4px; row-gap:12px; }
+.flow-step { display:flex; flex-direction:column; align-items:center; gap:6px; min-width:90px; }
+.flow-step-num { width:34px; height:34px; background:linear-gradient(135deg,var(--orange),var(--yellow)); border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Nunito',sans-serif; font-weight:800; font-size:14px; color:var(--dark); }
+.flow-step-label { font-size:11px; color:rgba(255,255,255,0.7); text-align:center; line-height:1.4; }
+.flow-arrow { color:rgba(255,255,255,0.2); font-size:18px; margin-bottom:14px; }
+
+/* SERVICE */
+.service-section { background:var(--white); padding:70px 32px; }
+.service-inner { max-width:960px; margin:0 auto; }
+.service-header { text-align:center; margin-bottom:40px; }
+.service-header h2 { font-family:'Paytone One',sans-serif; font-size:30px; color:var(--dark); }
+.service-header h2 span { color:var(--orange); }
+.service-header p { color:var(--gray); font-size:14px; margin-top:8px; line-height:1.8; }
+.service-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+.service-card { background:var(--off-white); border-radius:20px; padding:24px 20px; border:2px solid transparent; transition:all 0.2s; position:relative; overflow:hidden; }
+.service-card::before { content:''; position:absolute; top:0; left:0; right:0; height:4px; background:linear-gradient(90deg,var(--orange),var(--yellow)); opacity:0; transition:opacity 0.2s; }
+.service-card:hover { border-color:var(--orange-pale); transform:translateY(-3px); box-shadow:var(--shadow); }
+.service-card:hover::before { opacity:1; }
+.service-emoji { font-size:36px; margin-bottom:12px; display:block; }
+.service-name { font-family:'Paytone One',sans-serif; font-size:16px; color:var(--dark); margin-bottom:8px; }
+.service-desc { font-size:12px; color:var(--gray); line-height:1.7; margin-bottom:14px; }
+.service-price { display:inline-block; background:var(--orange-pale); color:var(--orange); font-family:'Nunito',sans-serif; font-size:17px; font-weight:800; padding:5px 14px; border-radius:20px; }
+.service-price.consult { background:var(--yellow-light); color:#8B6A00; font-family:'Noto Sans JP',sans-serif; font-size:13px; font-weight:700; }
+.service-cta { text-align:center; margin-top:36px; }
+.service-cta p { color:var(--gray); font-size:13px; margin-bottom:14px; }
+
+/* INSTAGRAM */
+.instagram-section { background:var(--off-white); padding:70px 32px; }
+.instagram-inner { max-width:960px; margin:0 auto; }
+.instagram-header { text-align:center; margin-bottom:32px; }
+.instagram-header h2 { font-family:'Paytone One',sans-serif; font-size:28px; color:var(--dark); }
+.instagram-header p { color:var(--gray); font-size:14px; margin-top:8px; }
+.instagram-handle { display:inline-flex; align-items:center; gap:6px; margin-top:10px; padding:6px 16px; background:linear-gradient(135deg,#833AB4,#FD1D1D,#FCB045); border-radius:20px; color:white; font-size:13px; font-weight:700; text-decoration:none; }
+.snapwidget-wrap { background:white; border-radius:20px; padding:20px; box-shadow:var(--shadow); }
+.ig-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; }
+.ig-cell { text-decoration:none; display:block; aspect-ratio:1; border-radius:10px; overflow:hidden; }
+.ig-thumb { width:100%; height:100%; background:linear-gradient(135deg,#833AB4,#FD1D1D,#FCB045); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; transition:opacity 0.2s; min-height:100px; position:relative; overflow:hidden; }
+.ig-thumb:hover { opacity:0.85; }
+.ig-thumb img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.ig-thumb .ig-overlay { position:absolute; inset:0; background:rgba(0,0,0,0.25); display:flex; align-items:flex-end; padding:8px; }
+.ig-thumb .ig-caption { font-size:11px; color:white; font-family:'Noto Sans JP',sans-serif; line-height:1.3; text-shadow:0 1px 4px rgba(0,0,0,0.8); overflow:hidden; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; }
+.ig-thumb-default { position:relative; z-index:1; display:flex; flex-direction:column; align-items:center; gap:6px; }
+.ig-thumb-default span:first-child { font-size:26px; }
+.ig-label { font-size:11px; color:white; font-family:'Noto Sans JP',sans-serif; }
+
+/* SNS */
+.sns-section { background:linear-gradient(135deg,#FFF4C2,#FFE0CC); padding:60px 32px; text-align:center; }
+.sns-section h2 { font-family:'Paytone One',sans-serif; font-size:28px; color:var(--dark); margin-bottom:10px; }
+.sns-section p { color:var(--gray); font-size:14px; margin-bottom:28px; }
+.sns-cards { display:flex; justify-content:center; gap:16px; flex-wrap:wrap; }
+.sns-card { background:white; border-radius:20px; padding:24px 32px; display:flex; flex-direction:column; align-items:center; gap:8px; text-decoration:none; color:var(--dark); box-shadow:var(--shadow); transition:transform 0.2s; min-width:140px; }
+.sns-card:hover { transform:translateY(-4px); }
+.sns-icon { font-size:32px; }
+.sns-name { font-weight:700; font-size:14px; }
+.sns-handle { font-size:11px; color:var(--gray); }
+
+/* ACCESS */
+.access-section { background:var(--white); padding:70px 32px; }
+.access-inner { max-width:960px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start; }
+.access-info h3 { font-family:'Paytone One',sans-serif; font-size:22px; color:var(--dark); margin-bottom:20px; }
+.info-row { display:flex; gap:12px; align-items:flex-start; margin-bottom:12px; }
+.info-icon { width:34px; height:34px; background:var(--orange-pale); border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:15px; flex-shrink:0; }
+.info-text { font-size:13px; line-height:1.8; color:var(--dark); }
+.info-text strong { display:block; font-size:11px; color:var(--gray); margin-bottom:2px; }
+.map-wrap { border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow); height:280px; }
+.map-wrap iframe { width:100%; height:100%; border:none; }
+
+/* CONTACT */
+.contact-section { background:var(--off-white); padding:70px 32px; }
+.contact-inner { max-width:560px; margin:0 auto; }
+.contact-header { text-align:center; margin-bottom:28px; }
+.contact-header h2 { font-family:'Paytone One',sans-serif; font-size:28px; color:var(--dark); }
+.contact-header p { color:var(--gray); font-size:14px; margin-top:8px; line-height:1.7; }
+.contact-btn { display:flex; align-items:center; justify-content:center; gap:10px; padding:18px; border-radius:14px; font-family:'Noto Sans JP',sans-serif; font-size:16px; font-weight:700; text-decoration:none; margin-bottom:12px; transition:opacity 0.2s; }
+.contact-btn:hover { opacity:0.88; }
+.contact-btn-line { background:#06C755; color:white; }
+.contact-btn-ig { background:linear-gradient(135deg,#833AB4,#FD1D1D,#FCB045); color:white; font-size:14px; }
+.contact-info { background:white; border-radius:16px; padding:22px; box-shadow:var(--shadow); margin-top:4px; text-align:center; font-size:13px; color:var(--gray); line-height:2.2; }
+
+/* FOOTER */
+footer { background:var(--dark); color:rgba(255,255,255,0.6); text-align:center; padding:40px 32px; font-size:12px; line-height:2; }
+footer .footer-logo { font-family:'Paytone One',sans-serif; font-size:22px; color:var(--yellow); margin-bottom:10px; }
+
+/* MODAL */
+.modal-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.5); z-index:200; align-items:center; justify-content:center; padding:20px; }
+.modal-overlay.open { display:flex; }
+.modal { background:white; border-radius:20px; max-width:480px; width:100%; padding:28px; position:relative; max-height:90vh; overflow-y:auto; }
+.modal-close { position:absolute; top:14px; right:14px; background:var(--gray-light); border:none; border-radius:50%; width:32px; height:32px; cursor:pointer; font-size:18px; }
+.modal h3 { font-family:'Paytone One',sans-serif; font-size:20px; margin-bottom:4px; }
+.modal-grade { font-size:13px; color:var(--gray); margin-bottom:16px; }
+.modal-price { font-family:'Nunito',sans-serif; font-size:30px; font-weight:800; color:var(--orange); margin-bottom:16px; }
+.modal-price small { font-size:13px; color:var(--gray); font-family:'Noto Sans JP',sans-serif; font-weight:400; }
+.modal-specs { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:18px; }
+.modal-spec { background:var(--off-white); border-radius:10px; padding:10px 12px; }
+.modal-spec-label { font-size:10px; color:var(--gray); }
+.modal-spec-value { font-size:14px; font-weight:700; color:var(--dark); margin-top:2px; }
+.modal-actions { display:flex; gap:10px; }
+.modal-btn-main { flex:1; background:var(--orange); color:white; border:none; border-radius:12px; padding:13px; font-family:'Noto Sans JP',sans-serif; font-size:14px; font-weight:700; cursor:pointer; }
+.modal-btn-line { background:#06C755; color:white; border:none; border-radius:12px; padding:13px 18px; font-size:18px; text-decoration:none; display:flex; align-items:center; }
+
+/* RESPONSIVE */
+@media (max-width:768px) {
+  header { padding:0 16px; height:56px; }
+  nav a:not(.nav-cta) { display:none; }
+  .hero { padding:56px 16px 48px; }
+  .hero h1 { font-size:34px; }
+  .hero-stats { gap:8px; }
+  .stat { padding:10px 14px; }
+  .stat-num { font-size:22px; }
+  .filter-bar { padding:10px 12px; }
+  .filter-label { display:none; }
+  .inventory-section { padding:24px 12px; }
+  .car-grid { grid-template-columns:1fr; gap:14px; }
+  .kaitori-section,.service-section,.instagram-section,.sns-section,.access-section,.contact-section { padding:44px 16px; }
+  .kaitori-cards { grid-template-columns:1fr; }
+  .service-grid { grid-template-columns:1fr 1fr; gap:10px; }
+  .access-inner { grid-template-columns:1fr; gap:24px; }
+  .map-wrap { height:220px; }
+  footer { padding:28px 16px; }
+}
+@media (max-width:480px) {
+  .service-grid { grid-template-columns:1fr; }
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoDealer",
+  "name": "株式会社北斗自動車",
+  "alternateName": "北斗自動車",
+  "url": "https://hokutojidousha.github.io/hokutojidousha/",
+  "logo": "https://hokutojidousha.github.io/hokutojidousha/car/logo.png",
+  "image": "https://hokutojidousha.github.io/hokutojidousha/car/logo.png",
+  "description": "石川県金沢市の中古車専門店。中古車販売・買取・車検・整備に対応。現車確認・試乗・下取り相談も歓迎。LINEで来店予約・査定相談ができます。",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "八日市出町951",
+    "addressLocality": "金沢市",
+    "addressRegion": "石川県",
+    "postalCode": "920-0024",
+    "addressCountry": "JP"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 36.5522153,
+    "longitude": 136.6095854
+  },
+  "telephone": "+81-76-207-7369",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "09:30",
+      "closes": "17:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Saturday","Sunday"],
+      "opens": "13:00",
+      "closes": "16:00"
+    }
+  ],
+  "sameAs": [
+    "https://www.instagram.com/HOKUTOJIDOUSHA_/",
+    "https://lin.ee/Nxu1UqE",
+    "https://www.youtube.com/@hokutojidousha"
+  ],
+  "priceRange": "¥〜¥¥¥",
+  "currenciesAccepted": "JPY",
+  "paymentAccepted": "現金, ローン",
+  "hasMap": "https://www.google.com/maps/place/株式会社北斗自動車"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "現車確認だけでも大丈夫ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "もちろんです！購入の意思がなくても、見るだけでも歓迎です。ご来店前にLINEや電話でご連絡いただけるとスムーズです。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "試乗はできますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい、試乗可能です。ご希望の場合はお電話またはLINEにてご予約ください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "下取りだけの相談も可能ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "もちろんです！他社で車を購入される場合でも、下取りや買取のご相談だけでもお気軽にどうぞ。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "LINEで在庫確認・相談できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい、LINEからお気軽にご相談いただけます。在庫確認・価格交渉・査定依頼など何でもお問い合わせください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ローンは組めますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい、ローンのご相談も承っております。まずはLINEや電話でお気軽にご相談ください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "修復歴ありの車も扱っていますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "在庫車両の修復歴は正直にお伝えしています。詳細は各車両の情報またはLINE・電話でご確認ください。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="logo-wrap">
+    <div class="logo-icon">🚗</div>
+    <div class="logo-text">株式会社北斗自動車<small>HOKUTO JIDOUSHA</small></div>
+  </div>
+  <div style="display:flex; align-items:center; gap:16px;">
+    <a href="tel:0762077369" style="display:flex; align-items:center; gap:6px; color:var(--orange); font-weight:700; font-size:13px; text-decoration:none;">
+      📞 076-207-7369
+    </a>
+    <nav>
+    <a href="#inventory">在庫車両</a>
+    <a href="https://hokutojidousha.github.io/hokutojidousha/kaitori.html">車の買取</a>
+    <a href="https://hokutojidousha.github.io/hokutojidousha/wheel_kaitori.html">ホイール買取</a>
+    <a href="#service">サービス</a>
+    <a href="#faq">FAQ</a>
+    <a href="#access">アクセス</a>
+    <a href="#contact" class="nav-cta">お問い合わせ</a>
+  </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-badge">🎉 在庫続々入荷中！</div>
+  <h1 style="font-family:'Paytone One',sans-serif; font-size:clamp(36px,7vw,68px); color:white; line-height:1.1; text-shadow:0 3px 12px rgba(0,0,0,0.15);">いいクルマ、<br>きっと見つかる。<br><span style="background:var(--yellow);color:var(--dark);padding:0 12px;border-radius:8px;display:inline-block;">北斗自動車</span></h1>
+  <p class="hero-sub" style="font-size:12px; opacity:0.75; margin-top:6px; margin-bottom:-8px;">金沢市の中古車販売・買取なら北斗自動車</p>
+  <p class="hero-sub">石川県金沢市の中古車専門店 — 丁寧な接客と安心の品質</p>
+  <div class="hero-stats">
+    <div class="stat"><div class="stat-num" id="carCount">-<span>台</span></div><div class="stat-label">現在の在庫台数</div></div>
+    <div class="stat"><div class="stat-num">✓</div><div class="stat-label">試乗・下取り相談OK</div></div>
+    <div class="stat"><div class="stat-num">LINE</div><div class="stat-label">LINEで気軽に相談</div></div>
+  </div>
+</section>
+
+<!-- 店舗情報ストリップ -->
+<div style="background:var(--dark); padding:12px 32px; display:flex; gap:24px; align-items:center; flex-wrap:wrap; justify-content:center;">
+  <a href="tel:0762077369" style="display:flex; align-items:center; gap:6px; color:white; text-decoration:none; font-size:13px; font-weight:700;">
+    📞 <span style="color:var(--yellow);">076-207-7369</span>
+  </a>
+  <span style="color:rgba(255,255,255,0.3);">|</span>
+  <span style="font-size:12px; color:rgba(255,255,255,0.75);">🕐 平日 9:30〜17:00 ／ 土日祝 13:00〜16:00</span>
+  <span style="color:rgba(255,255,255,0.3);">|</span>
+  <span style="font-size:12px; color:rgba(255,255,255,0.75);">📅 定休日：大型連休のみ</span>
+  <span style="color:rgba(255,255,255,0.3);">|</span>
+  <span style="font-size:12px; color:rgba(255,255,255,0.75);">📍 金沢市八日市出町951</span>
+  <a href="https://lin.ee/Nxu1UqE" target="_blank" style="background:#06C755; color:white; font-size:12px; font-weight:700; padding:6px 16px; border-radius:20px; text-decoration:none;">💬 LINEで来店予約</a>
+</div>
+
+<div class="filter-bar" id="inventory">
+  <span class="filter-label">絞り込み：</span>
+  <button class="filter-btn active" onclick="setFilter('all',this)">すべて</button>
+  <button class="filter-btn" onclick="setFilter('kei',this)">軽自動車</button>
+  <button class="filter-btn" onclick="setFilter('compact',this)">コンパクト</button>
+  <button class="filter-btn" onclick="setFilter('minivan',this)">ミニバン</button>
+  <button class="filter-btn" onclick="setFilter('suv',this)">SUV・4WD</button>
+</div>
+
+<section class="inventory-section">
+  <h2 class="section-title">🚗 在庫車両一覧 — 金沢市の中古車</h2>
+  <div class="car-grid" id="carGrid"></div>
+</section>
+
+
+<!-- 選ばれる理由 -->
+<section style="background:var(--off-white); padding:70px 32px;">
+  <div style="max-width:960px; margin:0 auto;">
+    <div style="text-align:center; margin-bottom:48px;">
+      <h2 style="font-family:'Paytone One',sans-serif; font-size:30px; color:var(--dark);">北斗自動車が<span style="color:var(--orange);">選ばれる理由</span></h2>
+      <p style="color:var(--gray); font-size:14px; margin-top:10px; line-height:1.8;">金沢市で中古車をお探しなら、販売から買取・整備までまとめてご相談ください。</p>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:20px;">
+      <div style="background:white; border-radius:20px; padding:28px 24px; box-shadow:var(--shadow); border-top:4px solid var(--orange);">
+        <div style="font-size:36px; margin-bottom:14px;">🤝</div>
+        <h3 style="font-family:'Paytone One',sans-serif; font-size:16px; color:var(--dark); margin-bottom:10px;">地域密着で相談しやすい</h3>
+        <p style="font-size:13px; color:var(--gray); line-height:1.8;">金沢市八日市出町で地域に根ざした営業を行っています。気軽にLINEや電話でご相談ください。</p>
+      </div>
+      <div style="background:white; border-radius:20px; padding:28px 24px; box-shadow:var(--shadow); border-top:4px solid var(--yellow);">
+        <div style="font-size:36px; margin-bottom:14px;">🚗</div>
+        <h3 style="font-family:'Paytone One',sans-serif; font-size:16px; color:var(--dark); margin-bottom:10px;">試乗・現車確認歓迎</h3>
+        <p style="font-size:13px; color:var(--gray); line-height:1.8;">気になるお車はぜひ実際に見て・乗って確認してください。ご予約の上でお越しください。</p>
+      </div>
+      <div style="background:white; border-radius:20px; padding:28px 24px; box-shadow:var(--shadow); border-top:4px solid var(--green);">
+        <div style="font-size:36px; margin-bottom:14px;">🔧</div>
+        <h3 style="font-family:'Paytone One',sans-serif; font-size:16px; color:var(--dark); margin-bottom:10px;">販売から整備まで一貫対応</h3>
+        <p style="font-size:13px; color:var(--gray); line-height:1.8;">車の販売だけでなく、買取・車検・修理・整備まで幅広く対応。購入後も安心してお任せください。</p>
+      </div>
+      <div style="background:white; border-radius:20px; padding:28px 24px; box-shadow:var(--shadow); border-top:4px solid #833AB4;">
+        <div style="font-size:36px; margin-bottom:14px;">💰</div>
+        <h3 style="font-family:'Paytone One',sans-serif; font-size:16px; color:var(--dark); margin-bottom:10px;">透明な価格・丁寧な説明</h3>
+        <p style="font-size:13px; color:var(--gray); line-height:1.8;">諸費用や車両状態を正直にお伝えします。納得いくまでご説明しますのでお気軽にどうぞ。</p>
+      </div>
+      <div style="background:white; border-radius:20px; padding:28px 24px; box-shadow:var(--shadow); border-top:4px solid #06C755;">
+        <div style="font-size:36px; margin-bottom:14px;">💬</div>
+        <h3 style="font-family:'Paytone One',sans-serif; font-size:16px; color:var(--dark); margin-bottom:10px;">LINEで気軽に相談</h3>
+        <p style="font-size:13px; color:var(--gray); line-height:1.8;">来店前の質問、在庫確認、買取査定の依頼などLINEでいつでもお気軽にどうぞ。</p>
+      </div>
+      <div style="background:white; border-radius:20px; padding:28px 24px; box-shadow:var(--shadow); border-top:4px solid var(--orange-light);">
+        <div style="font-size:36px; margin-bottom:14px;">🔄</div>
+        <h3 style="font-family:'Paytone One',sans-serif; font-size:16px; color:var(--dark); margin-bottom:10px;">下取り・買取も相談OK</h3>
+        <p style="font-size:13px; color:var(--gray); line-height:1.8;">今お乗りのお車の下取り・買取もお任せください。オークション代行で高値売却のご提案も可能です。</p>
+      </div>
+      <div style="background:white; border-radius:20px; padding:28px 24px; box-shadow:var(--shadow); border-top:4px solid #00b4d8; grid-column:span 1;">
+        <div style="font-size:36px; margin-bottom:14px;">🌬️</div>
+        <h3 style="font-family:'Paytone One',sans-serif; font-size:16px; color:var(--dark); margin-bottom:10px;">オゾン消臭・リンサー清掃</h3>
+        <p style="font-size:13px; color:var(--gray); line-height:1.8;">タバコ・ペット・食べ物のニオイをオゾンで根本から除去。リンサーでシートの汚れも徹底洗浄。<strong style="color:var(--orange);">他店にはない仕上がりの差</strong>があります。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 代表者挨拶 -->
+<section style="background:var(--white); padding:70px 32px;">
+  <div style="max-width:760px; margin:0 auto; display:flex; align-items:center; gap:48px; flex-wrap:wrap;">
+    <div style="flex-shrink:0; text-align:center;">
+      <div style="width:140px; height:140px; border-radius:50%; background:var(--gray-light); display:flex; align-items:center; justify-content:center; font-size:64px; margin:0 auto; border:4px solid var(--orange);">👨</div>
+      <p style="font-weight:700; font-size:14px; margin-top:12px; color:var(--dark);">中山（代表）</p>
+      <p style="font-size:12px; color:var(--gray);">株式会社北斗自動車</p>
+    </div>
+    <div style="flex:1; min-width:240px;">
+      <div style="display:inline-block; background:var(--orange-pale); color:var(--orange); font-size:11px; font-weight:700; letter-spacing:0.2em; padding:5px 14px; border-radius:20px; margin-bottom:16px;">代表からのご挨拶</div>
+      <h2 style="font-family:'Paytone One',sans-serif; font-size:22px; color:var(--dark); line-height:1.4; margin-bottom:16px;">クルマのことなら<br><span style="color:var(--orange);">なんでも相談してください。</span></h2>
+      <p style="font-size:14px; color:var(--gray); line-height:2.0;">はじめまして、北斗自動車の中山です。金沢で長年クルマに携わってきました。「高い買い物だから、納得して買ってほしい」という思いで一台一台丁寧にご案内しています。気になることがあれば、LINEでもお電話でもお気軽にどうぞ。</p>
+      <a href="https://lin.ee/Nxu1UqE" target="_blank" style="display:inline-flex; align-items:center; gap:8px; background:#06C755; color:white; font-size:14px; font-weight:700; padding:12px 28px; border-radius:50px; text-decoration:none; margin-top:20px;">💬 中山に直接相談する</a>
+    </div>
+  </div>
+</section>
+
+<!-- ローン計算バナー -->
+<section style="background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%); padding:48px 32px; text-align:center; position:relative; overflow:hidden;">
+  <div style="position:absolute; top:-40px; right:-40px; width:200px; height:200px; background:rgba(255,107,43,0.1); border-radius:50%;"></div>
+  <div style="position:absolute; bottom:-60px; left:-30px; width:250px; height:250px; background:rgba(255,210,63,0.08); border-radius:50%;"></div>
+  <div style="position:relative; z-index:1; max-width:640px; margin:0 auto;">
+    <div style="display:inline-block; background:rgba(255,107,43,0.2); color:#FF8F5E; font-size:11px; font-weight:700; letter-spacing:0.25em; padding:6px 18px; border-radius:20px; margin-bottom:18px;">💳 LOAN CALCULATOR</div>
+    <h2 style="font-family:'Paytone One',sans-serif; font-size:clamp(24px,5vw,36px); color:white; line-height:1.2; margin-bottom:12px;">月々いくら？<br>ローンをシミュレーション</h2>
+    <p style="font-size:14px; color:rgba(255,255,255,0.65); line-height:1.8; margin-bottom:32px;">
+      購入前にローンの目安を確認しておきましょう。<br>金額・期間・金利を入力するだけで簡単に計算できます。
+    </p>
+    <a href="https://hokutojidousha.github.io/hokutojidousha/car_loan_calculator.html" target="_blank"
+      style="display:inline-flex; align-items:center; gap:12px; background:linear-gradient(135deg,var(--orange),var(--yellow)); color:var(--dark); font-family:'Noto Sans JP',sans-serif; font-size:16px; font-weight:700; padding:18px 40px; border-radius:50px; text-decoration:none; box-shadow:0 8px 32px rgba(255,107,43,0.4); transition:transform 0.2s;"
+      onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
+      🧮 ローン計算してみる
+    </a>
+    <p style="font-size:11px; color:rgba(255,255,255,0.35); margin-top:16px;">※ 計算結果はあくまで目安です。詳細はLINEでご相談ください。</p>
+  </div>
+</section>
+
+<section class="kaitori-section" id="kaitori">
+  <div class="kaitori-inner">
+    <div class="kaitori-header">
+      <h2>🙌 お車・ホイールの<span>買取</span>やってます！</h2>
+      <p>不要になったお車やホイール、まずはお気軽にご相談ください。</p>
+    </div>
+    <div class="kaitori-cards">
+      <div class="kaitori-card">
+        <span class="kaitori-emoji">🚗</span>
+        <h3>お車の買取</h3>
+        <p>どんなお車でもまずはご相談を！走行距離・年式問わず査定いたします。</p>
+        <ul class="kaitori-points">
+          <li>どんな車種・年式でもOK</li>
+          <li>走行距離が多くても相談可</li>
+          <li>事故車・不動車もご相談ください</li>
+          <li>出張査定も対応可</li>
+        </ul>
+        <a href="https://lin.ee/Nxu1UqE" target="_blank" class="btn-kaitori">💬 LINEで査定を依頼</a>
+        <a href="https://hokutojidousha.github.io/hokutojidousha/kaitori.html" style="display:inline-flex;align-items:center;gap:6px;margin-top:10px;color:var(--orange);font-size:13px;font-weight:700;text-decoration:none;">詳しく見る →</a>
+      </div>
+      <div class="kaitori-card">
+        <span class="kaitori-emoji">🔩</span>
+        <h3>ホイールの買取</h3>
+        <p>アルミホイール・スタッドレスセット等、使わなくなったホイールをお売りください！</p>
+        <ul class="kaitori-points">
+          <li>アルミホイール各種</li>
+          <li>スタッドレスタイヤセットも可</li>
+          <li>状態・サイズによって査定</li>
+          <li>まずは写真をLINEで送ってOK</li>
+        </ul>
+        <a href="https://lin.ee/Nxu1UqE" target="_blank" class="btn-kaitori">📸 写真を送って査定</a>
+        <a href="https://hokutojidousha.github.io/hokutojidousha/wheel_kaitori.html" style="display:inline-flex;align-items:center;gap:6px;margin-top:10px;color:var(--yellow);font-size:13px;font-weight:700;text-decoration:none;">詳しく見る →</a>
+      </div>
+    </div>
+
+    <!-- オークション代行 -->
+    <div style="margin-top:28px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,210,63,0.3); border-radius:20px; padding:32px 28px; position:relative; overflow:hidden;">
+      <div style="position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg,#FFD23F,#FF6B2B);"></div>
+      <span style="font-size:40px; display:block; margin-bottom:14px;">🏷️</span>
+      <h3 style="font-family:'Paytone One',sans-serif; font-size:20px; color:var(--yellow); margin-bottom:10px;">オークション代行という選択肢</h3>
+      <p style="font-size:13px; color:rgba(255,255,255,0.7); line-height:1.8; margin-bottom:20px;">
+        他社でお車を購入される方も、売却はぜひご相談ください！<br>
+        <strong style="color:var(--yellow);">下取りより高く売れる可能性があります。</strong>
+      </p>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:20px;">
+        <div style="background:rgba(255,255,255,0.06); border-radius:12px; padding:16px;">
+          <div style="font-size:11px; color:var(--yellow); font-weight:700; letter-spacing:0.1em; margin-bottom:10px;">📋 売れなくてもかかる費用</div>
+          <ul style="list-style:none; font-size:12px; color:rgba(255,255,255,0.75); line-height:2;">
+            <li>・ オークション会場出品料</li>
+            <li>・ 車の送料</li>
+            <li>・ 弊社手数料（出品表作成など）</li>
+          </ul>
+        </div>
+        <div style="background:rgba(255,255,255,0.06); border-radius:12px; padding:16px;">
+          <div style="font-size:11px; color:var(--yellow); font-weight:700; letter-spacing:0.1em; margin-bottom:10px;">✅ 売れたときにかかる費用</div>
+          <ul style="list-style:none; font-size:12px; color:rgba(255,255,255,0.75); line-height:2;">
+            <li>・ オークション成約手数料</li>
+            <li>・ 書類の送料</li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="background:rgba(255,100,50,0.15); border:1px solid rgba(255,100,50,0.3); border-radius:12px; padding:16px; margin-bottom:20px;">
+        <div style="font-size:11px; color:#FF8F5E; font-weight:700; letter-spacing:0.1em; margin-bottom:10px;">⚠️ ご利用いただけないケース</div>
+        <ul style="list-style:none; font-size:12px; color:rgba(255,255,255,0.7); line-height:2;">
+          <li>・ ローン支払い中のお車</li>
+          <li>・ リース・残価設定ローン中のお車</li>
+          <li>・ 名義が申込者と異なるお車</li>
+          <li>・ 必要書類が揃わないお車</li>
+        </ul>
+      </div>
+
+      <div style="background:rgba(255,210,63,0.1); border:1px solid rgba(255,210,63,0.25); border-radius:12px; padding:16px; margin-bottom:20px;">
+        <div style="font-size:11px; color:var(--yellow); font-weight:700; letter-spacing:0.1em; margin-bottom:10px;">📩 より具体的な金額をお伝えするために</div>
+        <p style="font-size:12px; color:rgba(255,255,255,0.75); line-height:2;">
+          以下の情報をLINEでお送りいただけると、より正確な査定金額をお伝えできます😊
+        </p>
+        <ul style="list-style:none; font-size:12px; color:rgba(255,255,255,0.8); line-height:2.2; margin-top:8px;">
+          <li>💰 ご希望の売却金額</li>
+          <li>🔧 修復歴の有無</li>
+          <li>📄 車検証の写真</li>
+          <li>📸 内外装の写真（傷・凹みがある場合はその箇所も）</li>
+        </ul>
+      </div>
+      <a href="https://lin.ee/Nxu1UqE" target="_blank" class="btn-kaitori">💬 オークション代行を相談する</a>
+    </div>
+    <div class="kaitori-flow">
+      <h4>📋 買取の流れ</h4>
+      <div class="flow-steps">
+        <div class="flow-step"><div class="flow-step-num">1</div><div class="flow-step-label">LINEまたは<br>電話でご連絡</div></div>
+        <div class="flow-arrow">›</div>
+        <div class="flow-step"><div class="flow-step-num">2</div><div class="flow-step-label">写真・情報を<br>お送りください</div></div>
+        <div class="flow-arrow">›</div>
+        <div class="flow-step"><div class="flow-step-num">3</div><div class="flow-step-label">査定金額を<br>ご提示</div></div>
+        <div class="flow-arrow">›</div>
+        <div class="flow-step"><div class="flow-step-num">4</div><div class="flow-step-label">合意後に<br>お引き渡し</div></div>
+        <div class="flow-arrow">›</div>
+        <div class="flow-step"><div class="flow-step-num">5</div><div class="flow-step-label">即日〜<br>スピード対応</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="service-section" id="service">
+  <div class="service-inner">
+    <div class="service-header">
+      <h2>🔧 <span>メンテナンス</span>サービス</h2>
+      <p>販売だけじゃない！お車のお手入れ・整備もお任せください。</p>
+    </div>
+    <div class="service-grid">
+      <div class="service-card">
+        <span class="service-emoji">🔄</span>
+        <div class="service-name">タイヤ付け替え</div>
+        <p class="service-desc">夏タイヤ⇔スタッドレスの履き替え。12インチ車はお得な価格で対応！</p>
+        <span class="service-price">¥1,500〜 / 1台</span>
+      </div>
+      <div class="service-card">
+        <span class="service-emoji">🔦</span>
+        <div class="service-name">ライト磨き</div>
+        <p class="service-desc">黄ばみ・くすみを取り除き、透明感を復活！視認性アップに。</p>
+        <span class="service-price">¥2,000〜</span>
+      </div>
+      <div class="service-card">
+        <span class="service-emoji">🪑</span>
+        <div class="service-name">シート洗浄</div>
+        <p class="service-desc">シートの汚れ・ニオイをしっかり除去。気持ちよく乗れる車内に。</p>
+        <span class="service-price">¥10,000〜</span>
+      </div>
+      <div class="service-card">
+        <span class="service-emoji">✨</span>
+        <div class="service-name">車体磨き</div>
+        <p class="service-desc">ボディの傷・くすみを磨いてピカピカに。塗装面を保護します。</p>
+        <span class="service-price">¥10,000〜</span>
+      </div>
+      <div class="service-card">
+        <span class="service-emoji">🔍</span>
+        <div class="service-name">車検</div>
+        <p class="service-desc">法定点検・整備・書類手続きまで一式対応。安心して乗り続けるために。</p>
+        <span class="service-price consult">要相談</span>
+      </div>
+      <div class="service-card">
+        <span class="service-emoji">🔧</span>
+        <div class="service-name">修理・整備</div>
+        <p class="service-desc">エンジン・ブレーキ・足回りなど各種修理に対応します。</p>
+        <span class="service-price consult">要相談</span>
+      </div>
+    </div>
+    <div class="service-cta">
+      <p>料金は車種・状態によって異なります。まずはお気軽にご相談ください！</p>
+      <a href="https://lin.ee/Nxu1UqE" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:#06C755;color:white;font-family:'Noto Sans JP',sans-serif;font-size:15px;font-weight:700;padding:14px 32px;border-radius:14px;text-decoration:none;">
+        💬 LINEで相談・見積もり依頼
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- YouTube動画セクション -->
+<section style="background:var(--off-white); padding:70px 32px;" id="youtube">
+  <div style="max-width:900px; margin:0 auto;">
+    <h2 style="font-family:'Paytone One',sans-serif; font-size:clamp(22px,4vw,32px); color:var(--dark); text-align:center; margin-bottom:8px;">▶️ お役立ち動画</h2>
+    <p style="text-align:center; color:var(--gray); margin-bottom:40px; font-size:14px;">スマートキーの電池交換など、知って得するクルマ情報を発信中！</p>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:24px;">
+      <div style="border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow); background:white;">
+        <div style="position:relative; padding-bottom:56.25%; height:0;">
+          <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;" src="https://www.youtube.com/embed/Vg8cQ4Xs9ws" title="ダイハツ スマートキー電池交換" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div style="padding:14px 16px;">
+          <p style="font-weight:700; font-size:14px; color:var(--dark);">ダイハツ スマートキーの電池交換</p>
+          <p style="font-size:12px; color:#e62117; margin-top:4px; font-weight:700;">▶ 60万回再生</p>
+        </div>
+      </div>
+      <div style="border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow); background:white;">
+        <div style="position:relative; padding-bottom:56.25%; height:0;">
+          <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;" src="https://www.youtube.com/embed/2PjKvTHzU5Q" title="ホンダ スマートキー電池切れ エンジンのかけ方" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div style="padding:14px 16px;">
+          <p style="font-weight:700; font-size:14px; color:var(--dark);">ホンダ スマートキー電池切れ時のエンジンのかけ方</p>
+          <p style="font-size:12px; color:#e62117; margin-top:4px; font-weight:700;">▶ 18万回再生</p>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:32px;">
+      <a href="https://www.youtube.com/@hokutojidousha" target="_blank" style="display:inline-flex; align-items:center; gap:8px; background:#e62117; color:white; padding:14px 36px; border-radius:50px; font-weight:700; text-decoration:none; font-size:15px; box-shadow:0 4px 16px rgba(230,33,23,0.3);">▶️ お役立ち動画をもっと見る</a>
+    </div>
+  </div>
+</section>
+
+<section class="instagram-section">
+  <div class="instagram-inner">
+    <div class="instagram-header">
+      <h2>📸 最新のInstagram投稿</h2>
+      <p>在庫車両・買取情報・日常をリアルタイム発信中！</p>
+      <a href="https://www.instagram.com/HOKUTOJIDOUSHA_/" target="_blank" class="instagram-handle">📸 @HOKUTOJIDOUSHA_</a>
+    </div>
+    <div class="snapwidget-wrap">
+      <div class="ig-grid" id="igGrid">
+        <a href="https://www.instagram.com/HOKUTOJIDOUSHA_/" target="_blank" class="ig-cell"><div class="ig-thumb"><div class="ig-thumb-default"><span>📸</span><span class="ig-label">投稿を見る</span></div></div></a>
+        <a href="https://www.instagram.com/HOKUTOJIDOUSHA_/" target="_blank" class="ig-cell"><div class="ig-thumb"><div class="ig-thumb-default"><span>📸</span><span class="ig-label">投稿を見る</span></div></div></a>
+        <a href="https://www.instagram.com/HOKUTOJIDOUSHA_/" target="_blank" class="ig-cell"><div class="ig-thumb"><div class="ig-thumb-default"><span>📸</span><span class="ig-label">投稿を見る</span></div></div></a>
+        <a href="https://www.instagram.com/HOKUTOJIDOUSHA_/" target="_blank" class="ig-cell"><div class="ig-thumb"><div class="ig-thumb-default"><span>📸</span><span class="ig-label">投稿を見る</span></div></div></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sns-section">
+  <h2>📱 SNSでも発信中！</h2>
+  <p>最新の在庫情報・車両動画はSNSでもチェックできます。</p>
+  <div class="sns-cards">
+    <a href="https://www.instagram.com/HOKUTOJIDOUSHA_/" target="_blank" class="sns-card">
+      <span class="sns-icon">📸</span><span class="sns-name">Instagram</span><span class="sns-handle">@HOKUTOJIDOUSHA_</span>
+    </a>
+    <a href="https://lin.ee/Nxu1UqE" target="_blank" class="sns-card">
+      <span class="sns-icon">💬</span><span class="sns-name">LINE</span><span class="sns-handle">お見積り・相談</span>
+    </a>
+    <a href="https://www.youtube.com/@hokutojidousha" target="_blank" class="sns-card">
+      <span class="sns-icon">▶️</span><span class="sns-name">YouTube</span><span class="sns-handle">車両動画公開中</span>
+    </a>
+  </div>
+</section>
+
+<!-- よくある質問 -->
+<section style="background:var(--off-white); padding:70px 32px;" id="faq">
+  <div style="max-width:720px; margin:0 auto;">
+    <div style="text-align:center; margin-bottom:48px;">
+      <h2 style="font-family:'Paytone One',sans-serif; font-size:30px; color:var(--dark);">❓ よくある<span style="color:var(--orange);">ご質問</span></h2>
+      <p style="color:var(--gray); font-size:14px; margin-top:10px;">来店前の不安やご疑問にお答えします。</p>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:12px;">
+
+      <details style="background:white; border-radius:16px; padding:20px 24px; box-shadow:var(--shadow); cursor:pointer;">
+        <summary style="font-weight:700; font-size:15px; color:var(--dark); list-style:none; display:flex; justify-content:space-between; align-items:center;">
+          <span>Q. 現車確認だけでも大丈夫ですか？</span>
+          <span style="color:var(--orange); font-size:20px; flex-shrink:0; margin-left:12px;">＋</span>
+        </summary>
+        <p style="margin-top:14px; font-size:13px; color:var(--gray); line-height:1.9; border-top:1px solid var(--gray-light); padding-top:14px;">A. もちろんです！購入の意思がなくても、見るだけでも歓迎です。ご来店前にLINEや電話でご連絡いただけるとスムーズです。</p>
+      </details>
+      <details style="background:white; border-radius:16px; padding:20px 24px; box-shadow:var(--shadow); cursor:pointer;">
+        <summary style="font-weight:700; font-size:15px; color:var(--dark); list-style:none; display:flex; justify-content:space-between; align-items:center;">
+          <span>Q. 試乗はできますか？</span>
+          <span style="color:var(--orange); font-size:20px; flex-shrink:0; margin-left:12px;">＋</span>
+        </summary>
+        <p style="margin-top:14px; font-size:13px; color:var(--gray); line-height:1.9; border-top:1px solid var(--gray-light); padding-top:14px;">A. はい、試乗可能です。ご希望の場合はお電話またはLINEにてご予約ください。</p>
+      </details>
+      <details style="background:white; border-radius:16px; padding:20px 24px; box-shadow:var(--shadow); cursor:pointer;">
+        <summary style="font-weight:700; font-size:15px; color:var(--dark); list-style:none; display:flex; justify-content:space-between; align-items:center;">
+          <span>Q. 下取りだけの相談も可能ですか？</span>
+          <span style="color:var(--orange); font-size:20px; flex-shrink:0; margin-left:12px;">＋</span>
+        </summary>
+        <p style="margin-top:14px; font-size:13px; color:var(--gray); line-height:1.9; border-top:1px solid var(--gray-light); padding-top:14px;">A. もちろんです！他社で車を購入される場合でも、下取りや買取のご相談だけでもお気軽にどうぞ。</p>
+      </details>
+      <details style="background:white; border-radius:16px; padding:20px 24px; box-shadow:var(--shadow); cursor:pointer;">
+        <summary style="font-weight:700; font-size:15px; color:var(--dark); list-style:none; display:flex; justify-content:space-between; align-items:center;">
+          <span>Q. LINEで在庫確認・相談できますか？</span>
+          <span style="color:var(--orange); font-size:20px; flex-shrink:0; margin-left:12px;">＋</span>
+        </summary>
+        <p style="margin-top:14px; font-size:13px; color:var(--gray); line-height:1.9; border-top:1px solid var(--gray-light); padding-top:14px;">A. はい、LINEからお気軽にご相談いただけます。在庫確認・価格交渉・査定依頼など何でもお問い合わせください。</p>
+      </details>
+      <details style="background:white; border-radius:16px; padding:20px 24px; box-shadow:var(--shadow); cursor:pointer;">
+        <summary style="font-weight:700; font-size:15px; color:var(--dark); list-style:none; display:flex; justify-content:space-between; align-items:center;">
+          <span>Q. ローンは組めますか？</span>
+          <span style="color:var(--orange); font-size:20px; flex-shrink:0; margin-left:12px;">＋</span>
+        </summary>
+        <p style="margin-top:14px; font-size:13px; color:var(--gray); line-height:1.9; border-top:1px solid var(--gray-light); padding-top:14px;">A. はい、ローンのご相談も承っております。まずはLINEや電話でお気軽にご相談ください。</p>
+      </details>
+      <details style="background:white; border-radius:16px; padding:20px 24px; box-shadow:var(--shadow); cursor:pointer;">
+        <summary style="font-weight:700; font-size:15px; color:var(--dark); list-style:none; display:flex; justify-content:space-between; align-items:center;">
+          <span>Q. 修復歴ありの車も扱っていますか？</span>
+          <span style="color:var(--orange); font-size:20px; flex-shrink:0; margin-left:12px;">＋</span>
+        </summary>
+        <p style="margin-top:14px; font-size:13px; color:var(--gray); line-height:1.9; border-top:1px solid var(--gray-light); padding-top:14px;">A. 在庫車両の修復歴は正直にお伝えしています。詳細は各車両の情報またはLINE・電話でご確認ください。</p>
+      </details>
+    </div>
+    <div style="text-align:center; margin-top:36px;">
+      <p style="color:var(--gray); font-size:13px; margin-bottom:14px;">他にご不明な点がございましたらお気軽にどうぞ！</p>
+      <a href="https://lin.ee/Nxu1UqE" target="_blank" style="display:inline-flex; align-items:center; gap:8px; background:#06C755; color:white; font-family:'Noto Sans JP',sans-serif; font-size:15px; font-weight:700; padding:14px 32px; border-radius:14px; text-decoration:none;">💬 LINEで質問する</a>
+    </div>
+  </div>
+</section>
+
+<section class="access-section" id="access">
+  <div style="text-align:center;margin-bottom:40px;">
+    <h2 style="font-family:'Paytone One',sans-serif;font-size:28px;">📍 店舗・アクセス</h2>
+    <p style="color:var(--gray);margin-top:8px;font-size:14px;">お気軽にお越しください。試乗・現車確認はご予約優先です。</p>
+  </div>
+  <div class="access-inner">
+    <div class="access-info">
+      <h3>株式会社北斗自動車</h3>
+      <div class="info-row"><div class="info-icon">📍</div><div class="info-text"><strong>住所</strong>石川県金沢市八日市出町951</div></div>
+      <div class="info-row"><div class="info-icon">📞</div><div class="info-text"><strong>電話番号</strong><a href="tel:0762077369" style="color:var(--orange); font-weight:700; text-decoration:none; font-size:16px;">076-207-7369</a></div></div>
+      <div class="info-row"><div class="info-icon">🕐</div><div class="info-text"><strong>営業時間</strong>平日 9:30〜17:00<br>土日祝 13:00〜16:00</div></div>
+      <div class="info-row"><div class="info-icon">📅</div><div class="info-text"><strong>定休日</strong>大型連休のみ（年中ほぼ営業中）</div></div>
+      <div class="info-row"><div class="info-icon">🚗</div><div class="info-text"><strong>試乗・下取り</strong>試乗可・下取り買取相談歓迎</div></div>
+      <div class="info-row"><div class="info-icon">💬</div><div class="info-text"><strong>お問い合わせ</strong>LINEが一番スムーズです！</div></div>
+    </div>
+    <div class="map-wrap">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d210.81715923670075!2d136.60958535777735!3d36.55221532883131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sja!2sjp!4v1774776324855!5m2!1sja!2sjp" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section" id="contact">
+  <div class="contact-inner">
+    <div class="contact-header">
+      <h2>📨 お問い合わせ</h2>
+      <p>気になるお車のご相談、試乗予約、下取り査定など<br>なんでもお気軽にどうぞ！</p>
+    </div>
+    <a href="tel:0762077369" class="contact-btn" style="background:var(--orange); color:white; font-size:16px; font-weight:700;">📞 電話で来店予約・相談</a>
+    <a href="https://lin.ee/Nxu1UqE" target="_blank" class="contact-btn contact-btn-line">💬 LINEで来店予約・査定依頼</a>
+    <a href="https://www.instagram.com/HOKUTOJIDOUSHA_/" target="_blank" class="contact-btn contact-btn-ig">📸 Instagramを見る・DMで相談</a>
+    <div class="contact-info">
+      📍 石川県金沢市八日市出町951<br>
+      🚗 試乗・現車確認はご予約優先<br>
+      🔁 下取り・買取のご相談も大歓迎！<br>
+      🔩 ホイール買取もお気軽にどうぞ
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">株式会社北斗自動車</div>
+  <p>石川県金沢市八日市出町951<br>
+  Instagram: @HOKUTOJIDOUSHA_ ／ LINE: https://lin.ee/Nxu1UqE<br><br>
+  © 2024 株式会社北斗自動車. All rights reserved.</p>
+</footer>
+
+<div class="modal-overlay" id="modalOverlay" onclick="if(event.target===this)closeModal()">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">×</button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<script>
+// ===== スプレッドシートURL =====
+var CAR_SHEET_URL  = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRtVtiCpLY8mNa8kOuCd-Jv_zMP7iWN1eCF9ysz72PamQRVE35bMsyBkDf8_VV-vkm1M0QQ-YxlbYiv/pub?output=csv';
+var IG_SHEET_URL   = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRtVtiCpLY8mNa8kOuCd-Jv_zMP7iWN1eCF9ysz72PamQRVE35bMsyBkDf8_VV-vkm1M0QQ-YxlbYiv/pub?gid=1965190727&single=true&output=csv';
+
+// ===== バックアップデータ =====
+var BACKUP_CARS = [
+  { name:'スバル ステラ', grade:'660 L スマートアシスト キーレス', year:'2014年（H26）', km:'5.3万km', trans:'CVT', drive:'2WD', color:'ブラックM', inspection:'2027年3月', price:'¥289000', type:'kei', sold:'FALSE', image:'', badge:'', memo:'', carsensor_url:'', price_old:'' },
+  { name:'スズキ スペーシア', grade:'660 X 4WD スマートキー・パワースライド', year:'2013年（H25）', km:'8.5万km', trans:'CVT', drive:'4WD', color:'グリーン', inspection:'2026年9月', price:'¥388000', type:'kei', sold:'FALSE', image:'', badge:'', memo:'', carsensor_url:'', price_old:'' },
+  { name:'マツダ AZ-ワゴン', grade:'660 XG', year:'2011年（H23）', km:'2.1万km', trans:'AT', drive:'2WD', color:'シルバー', inspection:'車検整備無', price:'¥265000', type:'kei', sold:'FALSE', image:'', badge:'', memo:'', carsensor_url:'', price_old:'' },
+  { name:'ホンダ ライフ', grade:'660 ディーバ', year:'2006年（H18）', km:'6.9万km', trans:'AT', drive:'2WD', color:'イエロー', inspection:'2027年11月', price:'¥208000', type:'kei', sold:'FALSE', image:'', badge:'', memo:'', carsensor_url:'', price_old:'' }
+];
+
+var BACKUP_IG = [
+  { url:'https://www.instagram.com/HOKUTOJIDOUSHA_/', image:'', caption:'' },
+  { url:'https://www.instagram.com/HOKUTOJIDOUSHA_/', image:'', caption:'' },
+  { url:'https://www.instagram.com/HOKUTOJIDOUSHA_/', image:'', caption:'' },
+  { url:'https://www.instagram.com/HOKUTOJIDOUSHA_/', image:'', caption:'' }
+];
+
+var allCars = BACKUP_CARS;
+var currentFilter = 'all';
+
+// ===== CSV パース =====
+function parseCSV(csv) {
+  var lines = csv.trim().split('\n');
+  if (lines.length < 2) return [];
+  var headers = lines[0].split(',').map(function(h) { return h.trim().replace(/\r/g,'').replace(/"/g,''); });
+  var result = [];
+  for (var i = 1; i < lines.length; i++) {
+    var line = lines[i].replace(/\r/g,'');
+    if (!line.trim()) continue;
+    var cols = [];
+    var cur = '';
+    var inQ = false;
+    for (var j = 0; j < line.length; j++) {
+      var ch = line[j];
+      if (ch === '"') { inQ = !inQ; }
+      else if (ch === ',' && !inQ) { cols.push(cur.trim()); cur = ''; }
+      else { cur += ch; }
+    }
+    cols.push(cur.trim());
+    var obj = {};
+    for (var k = 0; k < headers.length; k++) {
+      obj[headers[k]] = (cols[k] || '').replace(/"/g,'').trim();
+    }
+    if (obj.name && obj.name !== '') result.push(obj);
+  }
+  return result;
+}
+
+// ===== 画像URL変換 =====
+function toImgUrl(url) {
+  if (!url || url.trim() === '') return '';
+  url = url.trim();
+  // GitHub Pages URL → そのまま
+  if (url.indexOf('github.io') !== -1) return url;
+  // GoogleドライブURL → thumbnail
+  var m = url.match(/\/d\/([a-zA-Z0-9_-]+)/);
+  if (m) return 'https://lh3.googleusercontent.com/d/' + m[1];
+  // その他 → そのまま
+  return url;
+}
+
+// ===== 在庫車レンダリング =====
+function renderCars() {
+  var grid = document.getElementById('carGrid');
+  if (!grid) return;
+  var filtered = allCars.filter(function(c) {
+    return currentFilter === 'all' || c.type === currentFilter;
+  });
+  if (filtered.length === 0) {
+    grid.innerHTML = '<p style="grid-column:1/-1;text-align:center;padding:40px;color:var(--gray);">該当する車両がありません</p>';
+    return;
+  }
+  var html = '';
+  for (var i = 0; i < filtered.length; i++) {
+    var c = filtered[i];
+    var idx = allCars.indexOf(c);
+    var isSold = (c.sold === 'TRUE' || c.sold === true);
+    var noShaken = (c.inspection === '車検整備無');
+    var imgUrl = toImgUrl(c.image);
+    var hasBadge = c.badge && c.badge.trim() !== '' && c.badge !== 'なし';
+    var hasMemo = c.memo && c.memo.trim() !== '' && c.memo !== 'なし';
+    var hasPriceOld = c.price_old && c.price_old.trim() !== '';
+    var hasCarsensor = c.carsensor_url && c.carsensor_url.trim() !== '';
+
+    html += '<div class="car-card" onclick="showModal(' + idx + ')">';
+    html += '<div class="card-img">';
+    if (imgUrl) {
+      html += '<img src="' + imgUrl + '" alt="' + c.name + '" onerror="this.style.display=\'none\'">';
+    } else {
+      html += '<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="13" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>';
+      html += '<span>写真準備中</span>';
+    }
+    if (hasBadge) html += '<div class="badge-custom">' + c.badge + '</div>';
+    if (isSold) html += '<div class="sold-overlay"><div class="sold-label">SOLD</div></div>';
+    html += '<button class="fav-btn" onclick="fav(event,this)">🤍</button>';
+    html += '</div>';
+    html += '<div class="card-body">';
+    html += '<div class="car-name">' + c.name + '</div>';
+    html += '<div class="car-grade">' + c.grade + '</div>';
+    if (hasMemo) html += '<div class="car-memo">✦ ' + c.memo + '</div>';
+    html += '<div class="car-tags">';
+    html += '<span class="tag tag-year">' + c.year + '</span>';
+    html += '<span class="tag tag-km">' + c.km + '</span>';
+    html += '<span class="tag tag-at">' + c.trans + '</span>';
+    html += '<span class="tag ' + (c.drive === '4WD' ? 'tag-4wd' : 'tag-2wd') + '">' + c.drive + '</span>';
+    html += '</div>';
+    html += '<div class="card-meta">';
+    if (hasPriceOld) html += '<div class="price-old">' + c.price_old + '<span class="price-down">値下げ</span></div>';
+    html += '<div class="car-price">' + c.price + '<small>（税込）</small></div>';
+    html += '<div class="car-inspection' + (noShaken ? ' warn' : '') + '">' + (noShaken ? '⚠️' : '✅') + ' 車検 ' + c.inspection + '</div>';
+    html += '</div>';
+    html += '<div class="card-action">';
+    html += '<button class="btn-inquiry" onclick="goContact(event)">問い合わせる</button>';
+    html += '<a href="https://lin.ee/Nxu1UqE" class="btn-line" onclick="event.stopPropagation()" target="_blank">💬</a>';
+    html += '</div>';
+    if (hasCarsensor) html += '<a href="' + c.carsensor_url + '" class="btn-carsensor" onclick="event.stopPropagation()" target="_blank">🔍 カーセンサーで詳細を見る</a>';
+    html += '</div></div>';
+  }
+  grid.innerHTML = html;
+  var el = document.getElementById('carCount');
+  if (el) el.innerHTML = allCars.filter(function(c) { return c.sold !== 'TRUE' && c.sold !== true; }).length + '<span>台</span>';
+
+  // InstagramグリッドをinstagramURL・instagramImage列から生成
+  var igPosts = [];
+  for (var ii = 0; ii < allCars.length; ii++) {
+    var igUrl = (allCars[ii].instagramURL || '').trim();
+    var igImg = (allCars[ii].instagramImage || '').trim();
+    var igMemo = (allCars[ii].instagrammemo || '').trim();
+    if (igUrl !== '') {
+      igPosts.push({
+        url: igUrl,
+        image: igImg,
+        caption: igMemo
+      });
+    }
+  }
+  if (igPosts.length > 0) renderIg(igPosts);
+}
+
+// ===== Instagramレンダリング =====
+function renderIg(posts) {
+  var grid = document.getElementById('igGrid');
+  if (!grid || !posts.length) return;
+  var html = '';
+  for (var i = 0; i < posts.length; i++) {
+    var p = posts[i];
+    var imgUrl = toImgUrl(p.image);
+    html += '<a href="' + (p.url || 'https://www.instagram.com/HOKUTOJIDOUSHA_/') + '" target="_blank" class="ig-cell">';
+    html += '<div class="ig-thumb">';
+    if (imgUrl) {
+      html += '<img src="' + imgUrl + '" alt="Instagram" onerror="this.style.display=\'none\'">';
+      if (p.caption && p.caption.trim() !== '') {
+        html += '<div class="ig-overlay"><div class="ig-caption">' + p.caption + '</div></div>';
+      }
+    } else {
+      html += '<div class="ig-thumb-default"><span>📸</span><span class="ig-label">投稿を見る</span></div>';
+    }
+    html += '</div></a>';
+  }
+  grid.innerHTML = html;
+}
+
+// ===== フィルター =====
+function setFilter(type, btn) {
+  document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
+  btn.classList.add('active');
+  currentFilter = type;
+  renderCars();
+}
+
+// ===== お気に入り =====
+function fav(e, btn) {
+  e.stopPropagation();
+  btn.classList.toggle('active');
+  btn.textContent = btn.classList.contains('active') ? '❤️' : '🤍';
+}
+
+// ===== 問い合わせへ =====
+function goContact(e) {
+  if (e) e.stopPropagation();
+  document.getElementById('contact').scrollIntoView({ behavior:'smooth' });
+}
+
+// ===== モーダル =====
+function showModal(i) {
+  var c = allCars[i];
+  document.getElementById('modalBody').innerHTML =
+    '<h3>' + c.name + '</h3>' +
+    '<p class="modal-grade">' + c.grade + '</p>' +
+    '<div class="modal-price">' + c.price + '<small>（税込）</small></div>' +
+    '<div class="modal-specs">' +
+    '<div class="modal-spec"><div class="modal-spec-label">年式</div><div class="modal-spec-value">' + c.year + '</div></div>' +
+    '<div class="modal-spec"><div class="modal-spec-label">走行距離</div><div class="modal-spec-value">' + c.km + '</div></div>' +
+    '<div class="modal-spec"><div class="modal-spec-label">ミッション</div><div class="modal-spec-value">' + c.trans + '</div></div>' +
+    '<div class="modal-spec"><div class="modal-spec-label">駆動</div><div class="modal-spec-value">' + c.drive + '</div></div>' +
+    '<div class="modal-spec"><div class="modal-spec-label">車体色</div><div class="modal-spec-value">' + c.color + '</div></div>' +
+    '<div class="modal-spec"><div class="modal-spec-label">車検</div><div class="modal-spec-value">' + c.inspection + '</div></div>' +
+    '</div>' +
+    '<div class="modal-actions">' +
+    '<button class="modal-btn-main" onclick="goContact();closeModal()">📨 問い合わせる</button>' +
+    '<a href="https://lin.ee/Nxu1UqE" class="modal-btn-line" target="_blank">💬</a>' +
+    '</div>';
+  document.getElementById('modalOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal() {
+  document.getElementById('modalOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// ===== データ読み込み =====
+window.onload = function() {
+  // バックアップで即表示
+  renderCars();
+  renderIg(BACKUP_IG);
+
+  // 在庫車スプレッドシート
+  fetch(CAR_SHEET_URL)
+    .then(function(r) { return r.text(); })
+    .then(function(t) {
+      var d = parseCSV(t);
+      if (d.length > 0) { allCars = d; renderCars(); }
+    })
+    .catch(function() {});
+
+  // Instagramグリッド：在庫車シートのinstagramURL列を使用
+  // （CAR_SHEET_URLは既に読み込み済みのため、allCarsから取得）
+};
+</script>
+</body>
+</html>
