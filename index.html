@@ -9,6 +9,10 @@
 <meta property="og:title" content="金沢市の中古車販売・買取なら北斗自動車 | 車検・整備も対応">
 <meta property="og:description" content="石川県金沢市の北斗自動車。中古車販売・買取・車検・整備に対応。現車確認・試乗・下取り相談も歓迎。LINEで来店予約できます。">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://hokutojidousha.github.io/hokutojidousha/">
+<meta property="og:image" content="https://hokutojidousha.github.io/hokutojidousha/car/logo.png">
+<meta property="og:site_name" content="北斗自動車">
+<link rel="canonical" href="https://hokutojidousha.github.io/hokutojidousha/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Noto+Sans+JP:wght@300;400;500;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -940,6 +944,12 @@ function renderCars() {
   if (!grid) return;
   var filtered = allCars.filter(function(c) {
     return currentFilter === 'all' || c.type === currentFilter;
+  });
+  // 販売中を先頭、SOLDを後ろに並び替え
+  filtered.sort(function(a, b) {
+    var aSold = (a.sold === 'TRUE' || a.sold === true) ? 1 : 0;
+    var bSold = (b.sold === 'TRUE' || b.sold === true) ? 1 : 0;
+    return aSold - bSold;
   });
   if (filtered.length === 0) {
     grid.innerHTML = '<p style="grid-column:1/-1;text-align:center;padding:40px;color:var(--gray);">該当する車両がありません</p>';
