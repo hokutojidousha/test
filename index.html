@@ -383,7 +383,7 @@ footer .footer-logo { font-family:'Paytone One',sans-serif; font-size:22px; colo
   <p class="hero-sub" style="font-size:12px; opacity:0.75; margin-top:6px; margin-bottom:-8px;">金沢市の中古車販売・買取なら北斗自動車</p>
   <p class="hero-sub">石川県金沢市の中古車専門店 — 丁寧な接客と安心の品質</p>
   <div class="hero-stats">
-    <div class="stat"><div class="stat-num" id="carCount">-<span>台</span></div><div class="stat-label">現在の在庫台数</div></div>
+    <div class="stat"><div class="stat-num" id="carCount" style="font-size:18px;">在庫確認</div><div class="stat-label">カーセンサーで見る</div></div>
     <div class="stat"><div class="stat-num">✓</div><div class="stat-label">試乗・下取り相談OK</div></div>
     <div class="stat"><div class="stat-num">LINE</div><div class="stat-label">LINEで気軽に相談</div></div>
   </div>
@@ -414,6 +414,14 @@ footer .footer-logo { font-family:'Paytone One',sans-serif; font-size:22px; colo
 
 <section class="inventory-section">
   <h2 class="section-title">🚗 在庫車両一覧 — 金沢市の中古車</h2>
+  <div style="background:linear-gradient(135deg,#1a1a2e,#0f3460); border-radius:var(--radius); padding:28px 32px; margin-bottom:28px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:20px;">
+    <div>
+      <p style="color:var(--yellow); font-size:11px; font-weight:700; letter-spacing:0.2em; margin-bottom:6px;">📋 在庫はカーセンサーで管理中</p>
+      <p style="color:white; font-size:18px; font-weight:700; line-height:1.4;">写真・価格・詳細スペックは<br>カーセンサーでご確認ください</p>
+      <p style="color:rgba(255,255,255,0.6); font-size:12px; margin-top:6px;">気になる車両はLINEでお気軽にご相談ください</p>
+    </div>
+    <a href="https://www.carsensor.net/usedcar/search.php?STID=CS210610&BRDC=&CARC=&PRICEMN=&PRICEMX=&SENDFLG=1&MKRC=&AREA=&keyword=&SHOP_ID=CSTY143284" target="_blank" style="display:inline-flex; align-items:center; gap:10px; background:var(--orange); color:white; font-weight:700; font-size:15px; padding:16px 32px; border-radius:50px; text-decoration:none; white-space:nowrap; box-shadow:0 4px 16px rgba(255,107,43,0.4);">🚗 カーセンサーで在庫を見る</a>
+  </div>
   <div class="car-grid" id="carGrid"></div>
 </section>
 
@@ -1047,6 +1055,36 @@ function closeModal() {
   document.getElementById('modalOverlay').classList.remove('open');
   document.body.style.overflow = '';
 }
+
+// ===== FAQアコーディオン修正 =====
+document.addEventListener('DOMContentLoaded', function() {
+  var details = document.querySelectorAll('details');
+  details.forEach(function(d) {
+    var summary = d.querySelector('summary');
+    var plus = summary ? summary.querySelector('span:last-child') : null;
+    if (summary) {
+      summary.addEventListener('click', function(e) {
+        e.preventDefault();
+        var isOpen = d.hasAttribute('open');
+        // 他を閉じる
+        details.forEach(function(other) {
+          if (other !== d) {
+            other.removeAttribute('open');
+            var op = other.querySelector('summary span:last-child');
+            if (op) op.textContent = '＋';
+          }
+        });
+        if (isOpen) {
+          d.removeAttribute('open');
+          if (plus) plus.textContent = '＋';
+        } else {
+          d.setAttribute('open', '');
+          if (plus) plus.textContent = '−';
+        }
+      });
+    }
+  });
+});
 
 // ===== データ読み込み =====
 window.onload = function() {
