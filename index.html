@@ -35,10 +35,10 @@
 }
 * { margin:0; padding:0; box-sizing:border-box; }
 html { scroll-behavior:smooth; }
-body { font-family:'Noto Sans JP',sans-serif; background:var(--off-white); color:var(--dark); overflow-x:hidden; }
+body { font-family:'Noto Sans JP',sans-serif; background:var(--off-white); color:var(--dark); overflow-x:hidden; padding-top:64px; }
 
 /* HEADER */
-header { position:sticky; top:0; z-index:100; background:var(--white); box-shadow:0 2px 16px rgba(43,31,20,0.08); padding:0 32px; height:64px; display:flex; align-items:center; justify-content:space-between; }
+header { position:fixed; top:0; left:0; right:0; z-index:100; background:var(--white); box-shadow:0 2px 16px rgba(43,31,20,0.08); padding:0 32px; height:64px; display:flex; align-items:center; justify-content:space-between; }
 .logo-wrap { display:flex; align-items:center; gap:10px; }
 .logo-icon { width:38px; height:38px; background:var(--orange); border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:20px; }
 .logo-text { font-family:'Paytone One',sans-serif; font-size:16px; color:var(--dark); letter-spacing:0.02em; line-height:1.1; }
@@ -231,6 +231,7 @@ footer .footer-logo { font-family:'Paytone One',sans-serif; font-size:22px; colo
 /* RESPONSIVE */
 @media (max-width:768px) {
   header { padding:0 16px; height:56px; }
+  body { padding-top:56px; }
   nav a:not(.nav-cta) { display:none; }
   .hero { padding:56px 16px 48px; }
   .hero h1 { font-size:34px; }
@@ -427,6 +428,9 @@ footer .footer-logo { font-family:'Paytone One',sans-serif; font-size:22px; colo
     <a href="https://www.carsensor.net/shop/ishikawa/227071003/#contents" target="_blank" style="display:inline-flex; align-items:center; gap:10px; background:var(--orange); color:white; font-weight:700; font-size:15px; padding:16px 32px; border-radius:50px; text-decoration:none; white-space:nowrap; box-shadow:0 4px 16px rgba(255,107,43,0.4);">🚗 カーセンサーで在庫を見る</a>
   </div>
   <div class="car-grid" id="carGrid"></div>
+  <div id="loadMoreWrap" style="text-align:center; margin-top:32px; display:none;">
+    <button id="loadMoreBtn" onclick="loadMoreCars()" style="background:var(--orange); color:white; border:none; border-radius:50px; padding:14px 40px; font-size:15px; font-weight:700; cursor:pointer; box-shadow:0 4px 16px rgba(255,107,43,0.35);">もっと見る ▼</button>
+  </div>
 </section>
 
 
@@ -831,6 +835,13 @@ function toImgUrl(url) {
 }
 
 // ===== 在庫車レンダリング =====
+var carsDisplayLimit = 6;
+
+function loadMoreCars() {
+  carsDisplayLimit += 6;
+  renderCars();
+}
+
 function renderCars() {
   var grid = document.getElementById('carGrid');
   if (!grid) return;
@@ -845,10 +856,15 @@ function renderCars() {
   });
   if (filtered.length === 0) {
     grid.innerHTML = '<p style="grid-column:1/-1;text-align:center;padding:40px;color:var(--gray);">該当する車両がありません</p>';
+    var wrap = document.getElementById('loadMoreWrap');
+    if (wrap) wrap.style.display = 'none';
     return;
   }
+  var visible = filtered.slice(0, carsDisplayLimit);
+  var wrap = document.getElementById('loadMoreWrap');
+  if (wrap) wrap.style.display = filtered.length > carsDisplayLimit ? 'block' : 'none';
   var html = '';
-  for (var i = 0; i < filtered.length; i++) {
+  for (var i = 0; i < visible.length; i++) {
     var c = filtered[i];
     var idx = allCars.indexOf(c);
     var isSold = (c.sold === 'TRUE' || c.sold === true);
@@ -942,6 +958,7 @@ function setFilter(type, btn) {
   document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
   btn.classList.add('active');
   currentFilter = type;
+  carsDisplayLimit = 6;
   renderCars();
 }
 
