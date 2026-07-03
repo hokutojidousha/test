@@ -64,9 +64,12 @@ nav .nav-cta:hover { background:var(--orange-light); color:white; }
 .stat-label { font-size:11px; opacity:0.85; margin-top:4px; letter-spacing:0.1em; }
 
 /* FILTER */
-.filter-bar { background:var(--white); padding:16px 32px; display:flex; gap:10px; align-items:center; border-bottom:2px solid var(--gray-light); position:sticky; top:64px; z-index:90; overflow-x:auto; -webkit-overflow-scrolling:touch; }
-.filter-label { font-size:12px; font-weight:700; color:var(--gray); letter-spacing:0.1em; margin-right:4px; white-space:nowrap; }
-.filter-btn { border:2px solid var(--gray-light); background:white; color:var(--gray); font-family:'Noto Sans JP',sans-serif; font-size:13px; font-weight:500; padding:8px 18px; border-radius:20px; cursor:pointer; transition:all 0.2s; white-space:nowrap; flex-shrink:0; }
+.filter-bar { background:var(--white); padding:0 32px; display:flex; gap:0; align-items:center; border-bottom:2px solid var(--gray-light); position:sticky; top:64px; z-index:90; overflow-x:auto; -webkit-overflow-scrolling:touch; }
+.filter-label { display:none; }
+.nav-tab { border:none; border-bottom:3px solid transparent; background:none; color:var(--gray); font-family:'Noto Sans JP',sans-serif; font-size:14px; font-weight:700; padding:14px 20px; cursor:pointer; transition:all 0.2s; white-space:nowrap; flex-shrink:0; text-decoration:none; display:flex; align-items:center; gap:5px; }
+.nav-tab:hover { color:var(--orange); border-bottom-color:var(--orange); }
+.type-filter { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:20px; }
+.filter-btn { border:2px solid var(--gray-light); background:white; color:var(--gray); font-family:'Noto Sans JP',sans-serif; font-size:13px; font-weight:500; padding:7px 16px; border-radius:20px; cursor:pointer; transition:all 0.2s; white-space:nowrap; flex-shrink:0; }
 .filter-btn:hover,.filter-btn.active { border-color:var(--orange); background:var(--orange-pale); color:var(--orange); }
 
 /* INVENTORY */
@@ -238,7 +241,9 @@ footer .footer-logo { font-family:'Paytone One',sans-serif; font-size:22px; colo
   .hero-stats { gap:8px; }
   .stat { padding:10px 14px; }
   .stat-num { font-size:22px; }
-  .filter-bar { padding:10px 12px; }
+  .filter-bar { padding:0 8px; }
+  .nav-tab { font-size:12px; padding:12px 12px; gap:3px; }
+  .type-filter { padding:0 16px; margin-bottom:16px; }
   .filter-label { display:none; }
   .inventory-section { padding:24px 12px; }
   .car-grid { grid-template-columns:1fr; gap:14px; }
@@ -408,17 +413,23 @@ footer .footer-logo { font-family:'Paytone One',sans-serif; font-size:22px; colo
   <a href="https://lin.ee/Nxu1UqE" target="_blank" style="background:#06C755; color:white; font-size:12px; font-weight:700; padding:6px 16px; border-radius:20px; text-decoration:none;">💬 LINEで来店予約</a>
 </div>
 
-<div class="filter-bar" id="inventory">
-  <span class="filter-label">絞り込み：</span>
-  <button class="filter-btn active" onclick="setFilter('all',this)">すべて</button>
-  <button class="filter-btn" onclick="setFilter('kei',this)">軽自動車</button>
-  <button class="filter-btn" onclick="setFilter('compact',this)">コンパクト</button>
-  <button class="filter-btn" onclick="setFilter('minivan',this)">ミニバン</button>
-  <button class="filter-btn" onclick="setFilter('suv',this)">SUV・4WD</button>
+<div class="filter-bar">
+  <button class="nav-tab" onclick="document.getElementById('inventory').scrollIntoView({behavior:'smooth'})">🚗 在庫</button>
+  <a class="nav-tab" href="kaitori.html">🙌 車の買取</a>
+  <a class="nav-tab" href="wheel_kaitori.html">🔩 ホイール買取</a>
+  <button class="nav-tab" onclick="document.getElementById('instagram').scrollIntoView({behavior:'smooth'})">📸 インスタ</button>
+  <button class="nav-tab" onclick="document.getElementById('access').scrollIntoView({behavior:'smooth'})">📍 アクセス</button>
 </div>
 
-<section class="inventory-section">
+<section class="inventory-section" id="inventory">
   <h2 class="section-title">🚗 在庫車両一覧 — 金沢市の中古車</h2>
+  <div class="type-filter">
+    <button class="filter-btn active" onclick="setFilter('all',this)">すべて</button>
+    <button class="filter-btn" onclick="setFilter('kei',this)">軽自動車</button>
+    <button class="filter-btn" onclick="setFilter('compact',this)">コンパクト</button>
+    <button class="filter-btn" onclick="setFilter('minivan',this)">ミニバン</button>
+    <button class="filter-btn" onclick="setFilter('suv',this)">SUV・4WD</button>
+  </div>
   <div style="background:linear-gradient(135deg,#1a1a2e,#0f3460); border-radius:var(--radius); padding:28px 32px; margin-bottom:28px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:20px;">
     <div>
       <p style="color:var(--yellow); font-size:11px; font-weight:700; letter-spacing:0.2em; margin-bottom:6px;">📋 在庫はカーセンサーで管理中</p>
@@ -624,7 +635,7 @@ footer .footer-logo { font-family:'Paytone One',sans-serif; font-size:22px; colo
   </div>
 </section>
 
-<section class="instagram-section">
+<section class="instagram-section" id="instagram">
   <div class="instagram-inner">
     <div class="instagram-header">
       <h2>📸 最新のInstagram投稿</h2>
